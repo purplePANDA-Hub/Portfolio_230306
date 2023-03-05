@@ -1,0 +1,807 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, h4, h5, h6, ul, ol, dl, li, dt, dd, p, div, span, img, a, table, tr, th, td, small, button, time, figure {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  z-index: 0;
+}
+
+html {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+li, dd {
+  list-style-type: none;
+}
+
+header, footer, nav, section, article, aside, figure, figcaption {
+  display: block;
+}
+
+img {
+  border: none;
+  vertical-align: bottom;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+body {
+  color: #606060;
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  background-color: #F2F2F2;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+:where(img, svg, img[src$=".svg"]) {
+  width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+@media (hover: hover) {
+  a:hover {
+    opacity: 0.7;
+    cursor: pointer;
+  }
+}
+*:focus {
+  outline: none;
+}
+
+strong {
+  font-weight: 900;
+}
+
+b {
+  font-weight: 700;
+}
+
+.topimage {
+  background-image: url(../img/background.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .topimage {
+    background-size: 768px;
+    height: 550px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .topimage {
+    background-size: cover;
+    height: 900px;
+  }
+}
+
+.header {
+  display: inline-block;
+  width: 100%;
+}
+
+.headercontent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.maintitle {
+  text-align: center;
+  display: inline;
+}
+
+.titlelink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .titlelogo {
+    width: 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .titlelogo {
+    width: 7rem;
+  }
+}
+
+.titletext {
+  width: 15rem;
+}
+
+.titletextmain {
+  color: #202020;
+  font-size: calc(1.4em + 0.074405 * (1vh - 0.48em));
+}
+
+.titletextsub {
+  font-size: calc(1em + 0.074405 * (1vh - 0.48em));
+  color: #202020;
+}
+
+.titleremark {
+  font-size: calc(0.8em + 0.074405 * (1vh - 0.48em));
+  color: #202020;
+}
+
+.mainmenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menucontainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.menu {
+  width: 13vw;
+  color: #202020;
+  text-align: center;
+  font-size: calc(0.8em + 3 * (1vh - 0.48em));
+}
+@media screen and (max-width: 767px) {
+  .menu {
+    display: none;
+  }
+}
+
+.menu i {
+  margin-right: 5px;
+}
+
+.hamberger {
+  width: 40px;
+  height: 40px;
+  border: solid #F2F2F2 0.5px;
+  border-radius: 10%;
+  position: absolute;
+  top: 100px;
+  right: 5vw;
+}
+@media screen and (max-width: 767px) {
+  .hamberger {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hamberger {
+    display: none;
+  }
+}
+
+.hamberger:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  border-color: #202020;
+}
+
+.hamberger-line {
+  display: block;
+  width: 25px;
+  border: solid #ffffff 0.5px;
+  position: absolute;
+  top: 19.25px;
+  left: 6.75px;
+}
+
+.hamberger-line:hover {
+  opacity: 0.7;
+  cursor: pointer;
+  border-color: #202020;
+}
+
+#upper {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
+#lower {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+}
+
+.mobile-menu-container {
+  display: none;
+  position: fixed;
+  top: 140px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #F2F2F2;
+  opacity: 0.8;
+  z-index: 1;
+}
+@media screen and (min-width: 768px) {
+  .mobile-menu-container {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  font-size: 20px;
+  display: block;
+  text-decoration: none;
+  color: #202020;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 60vw;
+  padding-right: 10px;
+}
+
+.information {
+  background-color: #ebfeeb;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.clinicinfo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .cliniclogo {
+    width: 5rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cliniclogo {
+    width: 7rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clinicname {
+    font-size: 15px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clinicname {
+    font-size: calc(1.4em + 0.074405 * (1vh - 0.48em));
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .clinicaddress {
+    font-size: 12.5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clinicaddress {
+    font-size: calc(1.4em + 0.074405 * (1vh - 0.48em));
+  }
+}
+
+.clinicschedule {
+  border: solid 1px #606060;
+  border-radius: 10px;
+  border-collapse: collapse;
+  margin: 20px auto;
+}
+@media screen and (max-width: 767px) {
+  .clinicschedule {
+    font-size: calc(8px + 0.074405 * (1vh - 0.48em));
+    width: 90%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .clinicschedule {
+    font-size: calc(1em + 0.074405 * (1vh - 0.48em));
+  }
+}
+
+.clinicschedule tr {
+  height: 40px;
+}
+
+.tablesubject {
+  background-color: #606060;
+  color: #ffffff;
+}
+
+.clinicschedule th {
+  width: 20%;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #606060;
+  vertical-align: middle;
+}
+
+.clinicschedule td {
+  width: 11.4285714286%;
+  border-width: 1px 0px;
+  border-style: solid;
+  border-color: #606060;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 767px) {
+  .scheduleremark {
+    font-size: 12.5px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .scheduleremark {
+    font-size: calc(1em + 0.074405 * (1vh - 0.48em));
+  }
+}
+
+.copy {
+  background-color: #ffffff;
+  color: #202020;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.return {
+  display: block;
+  color: inherit;
+  text-align: center;
+}
+
+.top-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  bottom: 120px;
+  opacity: 0;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+@media screen and (min-width: 768px) {
+  .top-button {
+    right: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .top-button {
+    right: 0px;
+  }
+}
+
+.top-button:hover {
+  cursor: pointer;
+}
+
+.top-line {
+  display: inline-block;
+  width: 100px;
+  height: 2px;
+  background: #606060;
+  -webkit-transition: all 0.7s;
+  transition: all 0.7s;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+}
+
+.top-button:hover .top-line {
+  -webkit-transform: scale(0, 1);
+          transform: scale(0, 1);
+  opacity: 0.7;
+}
+
+.top-button-comment {
+  font-size: 0.8em;
+  color: #606060;
+  font-weight: 800;
+  padding-left: 10px;
+}
+
+.top-button:hover .top-button-comment {
+  opacity: 0.7;
+}
+
+.load {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 80px;
+  -webkit-transition: opacity 3s;
+  transition: opacity 3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 2;
+}
+
+.load-image {
+  width: 35vw;
+  border-radius: 10%;
+  margin: 0 auto;
+  display: block;
+}
+
+.load-comment {
+  font-size: calc(1.5em + 0.074405 * (1vh - 0.48em));
+  text-align: center;
+  margin-top: 60px;
+}
+
+.inner {
+  margin-top: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .commitment {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .commitment {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .commitmentimage {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .commitmentimage {
+    width: 10%;
+  }
+}
+
+.commitmenttext {
+  text-align: center;
+}
+
+.commitmenttextmain {
+  font-size: calc(1.7em + 3 * (1vh - 0.48em));
+  margin: 0 5vw;
+}
+
+.commitmenttextsub {
+  font-size: calc(1.5em + 3 * (1vh - 0.48em));
+  margin: 0 5vw;
+  padding-bottom: 20px;
+}
+
+.treatment {
+  background-color: #ebfeeb;
+  padding-bottom: 20px;
+}
+
+.treatmenttitle {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .treatmentcontents {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .treatmentcontents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 17.5vw;
+  }
+}
+
+.treatmentcontent {
+  border: solid 1px #202020;
+  border-radius: 10px;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .treatmentcontent {
+    width: 70vw;
+    margin: 20px auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .treatmentcontent {
+    width: 30vw;
+    margin-bottom: 30px;
+  }
+}
+
+.treatmentitem {
+  font-size: 25px;
+  width: 40%;
+  margin: 10px auto;
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: solid 2px #202020;
+}
+
+.treatmentimage {
+  width: 75%;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.treatmenttext {
+  font-size: 15px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.clinictitle {
+  font-size: 30px;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .cliniccontent {
+    display: block;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cliniccontent {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 30px 20vw;
+  }
+}
+
+.doctorimage {
+  border-radius: 50%;
+}
+@media screen and (max-width: 767px) {
+  .doctorimage {
+    width: 40vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .doctorimage {
+    width: 20vw;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .doctorcomment {
+    margin: 20px auto;
+    font-size: calc(1em + 0.005 * (1vh - 0.48em));
+  }
+}
+@media screen and (min-width: 768px) {
+  .doctorcomment {
+    font-size: calc(1em + 4 * (1vh - 0.48em));
+    margin-left: 50px;
+  }
+}
+
+.access {
+  text-align: center;
+  background-color: #ebfeeb;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.accesstitle {
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+@media screen and (max-width: 767px) {
+  .accessmap {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .accessmap {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .accessmethod {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .accessmethod {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 30px 25vw;
+  }
+}
+
+.methodcontent {
+  width: 80%;
+}
+@media screen and (max-width: 767px) {
+  .methodcontent {
+    margin: 20px auto;
+  }
+}
+
+.methodtitle {
+  font-size: 20px;
+  width: 90%;
+  margin: 10px auto;
+  padding-bottom: 5px;
+  display: inline-block;
+  border-bottom: solid 2px #051705;
+}
+
+.contact {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.contacttitle {
+  font-size: 30px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+.contactnumber {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 10px auto;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 300px;
+}
+
+.number {
+  font-size: 30px;
+}
+
+.contactform {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.contacttable {
+  margin: 0px auto;
+}
+@media screen and (max-width: 767px) {
+  .contacttable {
+    width: 75vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacttable {
+    width: 50vw;
+  }
+}
+
+.tablehead {
+  text-align: left;
+  width: 25%;
+  padding: 8px 0;
+  vertical-align: top;
+}
+
+.tabledata {
+  width: 75%;
+}
+
+.nameinput {
+  width: 90%;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.emailinput {
+  width: 90%;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.contenttext {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.submitbutton {
+  height: 35px;
+  padding: 8px 0;
+  border-radius: 5px;
+  background-color: #ebfeeb;
+  cursor: pointer;
+  margin-top: 5px;
+}
+@media screen and (max-width: 767px) {
+  .submitbutton {
+    width: 50vw;
+  }
+}
+@media screen and (min-width: 768px) {
+  .submitbutton {
+    width: 10vw;
+  }
+}/*# sourceMappingURL=style.css.map */
