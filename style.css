@@ -80,7 +80,7 @@ b {
 }
 
 .topimage {
-  background-image: url(../img/background.jpg);
+  background-image: url(/background.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   width: 100%;
