@@ -787,6 +787,11 @@ b {
   margin: 0 auto;
 }
 
+input[type="submit"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 .submitbutton {
   height: 35px;
   padding: 8px 0;
